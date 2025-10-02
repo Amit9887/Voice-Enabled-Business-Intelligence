@@ -7,7 +7,7 @@ RUN npm ci --only=production
 COPY frontend/ ./
 RUN npm run build
 
-FROM maven:3.8.6-openjdk-17-slim AS backend-builder
+FROM maven:3.9.4-openjdk-17 AS backend-builder
 
 WORKDIR /app/backend
 COPY backend/pom.xml ./
